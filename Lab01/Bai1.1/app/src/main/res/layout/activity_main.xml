@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MainActivity">
+
+    <!-- Top LinearLayout -->
+    <LinearLayout
+        android:id="@+id/topLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_weight="1"
+        android:background="@color/color0"
+        app:layout_constraintBottom_toTopOf="@+id/verticalLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </LinearLayout>
+
+    <!-- Middle LinearLayout (verticalLinearLayout) -->
+    <LinearLayout
+        android:id="@+id/verticalLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintVertical_weight="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLinearLayout">
+
+        <!-- Left LinearLayout -->
+        <LinearLayout
+            android:id="@+id/leftLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rightLinearLayout"
+            app:layout_constraintRight_toLeftOf="@+id/rightLinearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/leftInner1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/leftInner2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/left"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/top"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/bot"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/color6"
+                            android:orientation="horizontal">
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/right"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/color4"
+                        android:orientation="vertical">
+                    </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/leftInner2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_constraintEnd_toEndOf="parent"
+                android:layout_constraintStart_toStartOf="parent"
+                android:layout_weight="1"
+                android:background="@color/color3"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/leftInner1">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Right LinearLayout -->
+        <LinearLayout
+            android:id="@+id/rightLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_constraintBottom_toBottomOf="parent"
+            android:layout_constraintStart_toEndOf="@+id/leftLinearLayout"
+            android:layout_constraintEnd_toEndOf="parent"
+            android:layout_constraintTop_toTopOf="parent"
+            android:layout_weight="1"
+            android:background="@color/color1"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
